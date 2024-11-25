@@ -1,0 +1,285 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceApi\\E-CommerceApi.csproj": {}
+  },
+  "projects": {
+    "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceApi\\E-CommerceApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceApi\\E-CommerceApi.csproj",
+        "projectName": "E-CommerceApi",
+        "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceApi\\E-CommerceApi.csproj",
+        "packagesPath": "C:\\Users\\metro\\.nuget\\packages\\",
+        "outputPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\metro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\E-CommerceService.csproj": {
+                "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\E-CommerceService.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\E-CommerceDomain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\E-CommerceDomain.csproj",
+        "projectName": "E-CommerceDomain",
+        "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\E-CommerceDomain.csproj",
+        "packagesPath": "C:\\Users\\metro\\.nuget\\packages\\",
+        "outputPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\metro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\E-CommerceRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\E-CommerceRepository.csproj",
+        "projectName": "E-CommerceRepository",
+        "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\E-CommerceRepository.csproj",
+        "packagesPath": "C:\\Users\\metro\\.nuget\\packages\\",
+        "outputPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\metro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\E-CommerceDomain.csproj": {
+                "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceDomain\\E-CommerceDomain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\E-CommerceService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\E-CommerceService.csproj",
+        "projectName": "E-CommerceService",
+        "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\E-CommerceService.csproj",
+        "packagesPath": "C:\\Users\\metro\\.nuget\\packages\\",
+        "outputPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\metro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\E-CommerceRepository.csproj": {
+                "projectPath": "D:\\Technologies\\Backend\\8- Asp.Net Web APIs\\E-Commerce Project\\E-Commerce Solution\\E-CommerceRepository\\E-CommerceRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

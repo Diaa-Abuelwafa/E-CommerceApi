@@ -1,0 +1,17 @@
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceService.deps.json
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceService.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceService.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceDomain.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceRepository.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceRepository.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\bin\Debug\net8.0\E-CommerceDomain.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.csproj.AssemblyReference.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.AssemblyInfoInputs.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.AssemblyInfo.cs
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.csproj.CoreCompileInputs.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-Commer.6466E29A.Up2Date
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\refint\E-CommerceService.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\E-CommerceService.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceService\obj\Debug\net8.0\ref\E-CommerceService.dll

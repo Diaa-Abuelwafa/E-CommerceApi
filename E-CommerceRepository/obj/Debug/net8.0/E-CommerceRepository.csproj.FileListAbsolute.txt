@@ -1,0 +1,15 @@
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\bin\Debug\net8.0\E-CommerceRepository.deps.json
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\bin\Debug\net8.0\E-CommerceRepository.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\bin\Debug\net8.0\E-CommerceRepository.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\bin\Debug\net8.0\E-CommerceDomain.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\bin\Debug\net8.0\E-CommerceDomain.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.csproj.AssemblyReference.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.AssemblyInfoInputs.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.AssemblyInfo.cs
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.csproj.CoreCompileInputs.cache
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-Commer.32D184EE.Up2Date
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\refint\E-CommerceRepository.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\E-CommerceRepository.pdb
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceRepository\obj\Debug\net8.0\ref\E-CommerceRepository.dll
