@@ -2,14 +2,18 @@
 using E_CommerceApi.HandlingErrors;
 using E_CommerceApi.Middlewares;
 using E_CommerceDomain.Interfaces;
+using E_CommerceDomain.Interfaces.Basket_Module;
 using E_CommerceDomain.Interfaces.Product_Module;
 using E_CommerceRepository.Data.Contexts;
 using E_CommerceRepository.Data.Helper;
 using E_CommerceRepository.Repositories;
+using E_CommerceRepository.Repositories.Basket_Module;
+using E_CommerceService.Services.Basket_Module;
 using E_CommerceService.Services.Product_Module;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 using System.Net;
 
 namespace E_CommerceApi
@@ -62,6 +66,14 @@ namespace E_CommerceApi
                 O.UseSqlServer(builder.Configuration.GetConnectionString("Cs"));
             });
 
+            // Add IConnectionMultiplexer To The DI Container
+            builder.Services.AddSingleton<IConnectionMultiplexer>(O =>
+            {
+                var Connection = builder.Configuration.GetConnectionString("Redis");
+
+                return ConnectionMultiplexer.Connect(Connection);
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -70,6 +82,10 @@ namespace E_CommerceApi
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             builder.Services.AddScoped<IProductService, ProductService>();
+
+            builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+
+            builder.Services.AddScoped<IBasketServices, BasketService>();
 
             var app = builder.Build();
 

@@ -5,7 +5,7 @@
         public int StatusCode { get; set; }
         public string Message { get; set; }
 
-        public ApiErrorResponse(int StatusCode, string? Message)
+        public ApiErrorResponse(int StatusCode, string? Message = null)
         {
             this.StatusCode = StatusCode;
 
