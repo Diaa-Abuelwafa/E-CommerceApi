@@ -1,4 +1,5 @@
-﻿using E_CommerceDomain.Entities.Product_Module;
+﻿using E_CommerceDomain.Entities.Account_Module;
+using E_CommerceDomain.Entities.Product_Module;
 using E_CommerceRepository.Data.Contexts;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace E_CommerceRepository.Data.Helper
 {
     public static class SeedData
     {
-        public static void Seed(AppDbContext Context)
+        public static void Seed(AppDbContext Context, AccountDbContext AccountContext)
         {
             // Add Brands SeedData To DB
             if(Context.Brands.Count() == 0)
@@ -60,6 +61,21 @@ namespace E_CommerceRepository.Data.Helper
 
                     // After Add These Seed Data Make Save Changes
                     Context.SaveChanges();
+                }
+            }
+
+            // Add Addresses Seed Data To Identity DB
+            if(AccountContext.Addresses.Count() == 0)
+            {
+                var AddresseJson = File.ReadAllText("../E-CommerceRepository/Data/SeedDataFiles/Account Module/Addresses.json");
+
+                if(AddresseJson is not null && AddresseJson.Count() > 0)
+                {
+                    var Addresses = JsonSerializer.Deserialize<List<Address>>(AddresseJson);
+
+                    AccountContext.Addresses.AddRange(Addresses);
+
+                    AccountContext.SaveChanges();
                 }
             }
         }

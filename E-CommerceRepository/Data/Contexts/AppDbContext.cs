@@ -16,7 +16,7 @@ namespace E_CommerceRepository.Data.Contexts
         public DbSet<ProductBrand> Brands { get; set; }
         public DbSet<ProductType> Types { get; set; }
 
-        public AppDbContext(DbContextOptions Options) : base(Options)
+        public AppDbContext(DbContextOptions<AppDbContext> Options) : base(Options)
         {
             
         }

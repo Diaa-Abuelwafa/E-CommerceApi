@@ -1,20 +1,27 @@
 
 using E_CommerceApi.HandlingErrors;
 using E_CommerceApi.Middlewares;
+using E_CommerceDomain.Entities.Account_Module;
 using E_CommerceDomain.Interfaces;
+using E_CommerceDomain.Interfaces.Account_Module;
 using E_CommerceDomain.Interfaces.Basket_Module;
 using E_CommerceDomain.Interfaces.Product_Module;
 using E_CommerceRepository.Data.Contexts;
 using E_CommerceRepository.Data.Helper;
 using E_CommerceRepository.Repositories;
 using E_CommerceRepository.Repositories.Basket_Module;
+using E_CommerceService.Services.Account_Module;
 using E_CommerceService.Services.Basket_Module;
 using E_CommerceService.Services.Product_Module;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using StackExchange.Redis;
 using System.Net;
+using System.Text;
 
 namespace E_CommerceApi
 {
@@ -58,12 +65,21 @@ namespace E_CommerceApi
                 };
             });
 
-            
+            // Add Identity Services To The DI Container
 
-            // Add AppDbContext Service Ti The DI Container
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                            .AddEntityFrameworkStores<AccountDbContext>();
+
+            // Add AppDbContext Service The DI Container
             builder.Services.AddDbContext<AppDbContext>(O =>
             {
                 O.UseSqlServer(builder.Configuration.GetConnectionString("Cs"));
+            });
+
+            // Add AccountDbContext To The DI Container
+            builder.Services.AddDbContext<AccountDbContext>(O =>
+            {
+                O.UseSqlServer(builder.Configuration.GetConnectionString("Identity"));
             });
 
             // Add IConnectionMultiplexer To The DI Container
@@ -74,7 +90,7 @@ namespace E_CommerceApi
                 return ConnectionMultiplexer.Connect(Connection);
             });
 
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            // Configurations For Swagger
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -87,6 +103,36 @@ namespace E_CommerceApi
 
             builder.Services.AddScoped<IBasketServices, BasketService>();
 
+            builder.Services.AddScoped<IAccountService, AccountService>();
+
+            // Configure Authentication Middleware To Work JWT Base
+            builder.Services.AddAuthentication(O =>
+            {
+                // For Verify Authentication Jwt Base
+                O.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+
+                // For When The Request Come From Un Authenticated Consumer Return UnAuthorize Response
+                O.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(O =>
+            {
+                // Check In The Token On The Expire Time
+                O.SaveToken = true;
+
+                // The Request Https Protocol
+                O.RequireHttpsMetadata = true;
+
+                // Check On Claims Matched The App Values Or Not 
+                O.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidIssuer = builder.Configuration["Jwt:ProviderUrl"],
+                    ValidateAudience = true,
+                    ValidAudience = builder.Configuration["Jwt:ConsumerUrl"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+                };
+            });
+
             var app = builder.Build();
 
             // To Handle Server Error
@@ -96,14 +142,17 @@ namespace E_CommerceApi
             using(var Scope = app.Services.CreateScope())
             {
                 var Context = Scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                var AccountContext = Scope.ServiceProvider.GetRequiredService<AccountDbContext>();
 
                 try
                 {
-                    // Update Database
+                    // Update AppDbContext Database
                     await Context.Database.MigrateAsync();
 
-                    // Add Seed Data To The Database
-                    SeedData.Seed(Context);
+                    await AccountContext.Database.MigrateAsync();
+
+                    // Add Seed Data To The Two Databases
+                    SeedData.Seed(Context, AccountContext);
                 }
                 catch(Exception Ex)
                 {
@@ -111,18 +160,18 @@ namespace E_CommerceApi
                 }
             }
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
-            // CORS Policy Middleware
-            app.UseCors("MyPolicy");
+            app.UseAuthentication();
 
-            // To Handle NotFound EndPoint
-            app.UseStatusCodePagesWithReExecute("/api/Error");
+            app.UseAuthorization();
+
+            // MiddleWare To Handle The Not Found EndPoint
+            app.UseStatusCodePagesWithReExecute("/api/Errors");
 
             app.UseStaticFiles();
 

@@ -1,6 +1,7 @@
 ﻿using E_CommerceApi.HandlingErrors;
 using E_CommerceDomain.DTOs.Product_Module;
 using E_CommerceDomain.Interfaces.Product_Module;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -9,6 +10,7 @@ namespace E_CommerceApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService ProductService;
