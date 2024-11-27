@@ -5,11 +5,13 @@ using E_CommerceDomain.Entities.Account_Module;
 using E_CommerceDomain.Interfaces;
 using E_CommerceDomain.Interfaces.Account_Module;
 using E_CommerceDomain.Interfaces.Basket_Module;
+using E_CommerceDomain.Interfaces.Caching_Service;
 using E_CommerceDomain.Interfaces.Product_Module;
 using E_CommerceRepository.Data.Contexts;
 using E_CommerceRepository.Data.Helper;
 using E_CommerceRepository.Repositories;
 using E_CommerceRepository.Repositories.Basket_Module;
+using E_CommerceRepository.Repositories.Caching_Service;
 using E_CommerceService.Services.Account_Module;
 using E_CommerceService.Services.Basket_Module;
 using E_CommerceService.Services.Product_Module;
@@ -104,6 +106,8 @@ namespace E_CommerceApi
             builder.Services.AddScoped<IBasketServices, BasketService>();
 
             builder.Services.AddScoped<IAccountService, AccountService>();
+
+            builder.Services.AddSingleton<ICachedService, CachedService>();
 
             // Configure Authentication Middleware To Work JWT Base
             builder.Services.AddAuthentication(O =>

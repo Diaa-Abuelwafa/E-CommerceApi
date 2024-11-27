@@ -1,4 +1,5 @@
-﻿using E_CommerceApi.HandlingErrors;
+﻿using E_CommerceApi.Custom_Attributes;
+using E_CommerceApi.HandlingErrors;
 using E_CommerceDomain.DTOs.Product_Module;
 using E_CommerceDomain.Interfaces.Product_Module;
 using Microsoft.AspNetCore.Authorization;
@@ -22,6 +23,7 @@ namespace E_CommerceApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(GetAllProductsResponse), 200)]
+        [Cached(60)]
         public IActionResult GetAllProducts([FromQuery] ProductParams Params)
         {
             var Products = ProductService.GetAllProducts(Params);
