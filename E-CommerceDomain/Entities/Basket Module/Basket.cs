@@ -10,5 +10,8 @@ namespace E_CommerceDomain.Entities.Basket_Module
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public List<BasketItem> Items { get; set; } = new List<BasketItem>();
+        public int? DeliveryMethodId { get; set; }
+        public string? PaymentIntentId { get; set; }
+        public string? ClientSecret { get; set; }
     }
 }

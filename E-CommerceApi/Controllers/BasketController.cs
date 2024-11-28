@@ -39,7 +39,7 @@ namespace E_CommerceApi.Controllers
             return Created();
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete]
         public IActionResult DeleteBasket(string BasketId)
         {
             bool Flag = BasketServices.DeleteBasket(BasketId);

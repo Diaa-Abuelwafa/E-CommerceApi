@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\IdentityMigrations\" />
+    <Folder Include="Data\SeedDataFiles\Order Module\" />
   </ItemGroup>
 
 </Project>

@@ -75,5 +75,10 @@ namespace E_CommerceRepository.Repositories
         {
             return SpecificationsEvaluator<TEntity, TKey>.GetQuery(Context.Set<TEntity>(), Spec).Count();
         }
+
+        public TEntity GetByIdWithoutSpecifications(TKey Id)
+        {
+            return Context.Set<TEntity>().Find(Id);
+        }
     }
 }

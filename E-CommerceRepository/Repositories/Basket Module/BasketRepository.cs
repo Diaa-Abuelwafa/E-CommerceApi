@@ -19,7 +19,7 @@ namespace E_CommerceRepository.Repositories.Basket_Module
         }
         public Basket AddOrUpdateBasket(Basket Item)
         {
-            var Items = JsonSerializer.Serialize(Item.Items);
+            var Items = JsonSerializer.Serialize(Item);
             var Test = Redis.StringSet(Item.Id, Items, TimeSpan.FromDays(1));
 
             return Item;

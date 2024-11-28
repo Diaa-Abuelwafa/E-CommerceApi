@@ -16,5 +16,6 @@ namespace E_CommerceDomain.Interfaces
         public bool Update(TEntity Item);
         public bool Delete(TKey Id);
         public int CountItems(ISpecifications<TEntity, TKey> Spec);
+        public TEntity GetByIdWithoutSpecifications(TKey Id);
     }
 }

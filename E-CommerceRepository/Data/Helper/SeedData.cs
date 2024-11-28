@@ -1,4 +1,5 @@
 ﻿using E_CommerceDomain.Entities.Account_Module;
+using E_CommerceDomain.Entities.Order_Module;
 using E_CommerceDomain.Entities.Product_Module;
 using E_CommerceRepository.Data.Contexts;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Address = E_CommerceDomain.Entities.Account_Module.Address;
 
 namespace E_CommerceRepository.Data.Helper
 {
@@ -76,6 +78,20 @@ namespace E_CommerceRepository.Data.Helper
                     AccountContext.Addresses.AddRange(Addresses);
 
                     AccountContext.SaveChanges();
+                }
+            }
+
+            if(Context.DeliveryMethods.Count() == 0)
+            {
+                var DataFromFile = File.ReadAllText("../E-CommerceRepository/Data/SeedDataFiles/Order Module/delivery.json");
+
+                if(DataFromFile is not null)
+                {
+                    var Data = JsonSerializer.Deserialize<List<DeliveryMethod>>(DataFromFile);
+
+                    Context.DeliveryMethods.AddRange(Data);
+
+                    Context.SaveChanges();
                 }
             }
         }

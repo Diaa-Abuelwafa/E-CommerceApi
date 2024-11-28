@@ -22,7 +22,10 @@ namespace E_CommerceService.Services.Basket_Module
             Basket B = new Basket()
             {
                 Id = Item.Id,
-                Items = Item.Items
+                Items = Item.Items,
+                DeliveryMethodId = Item.DeliveryMethodId,
+                PaymentIntentId = Item.PaymentIntentId,
+                ClientSecret = Item.ClientSecret
             };
 
             var BasketFromDb = BasketRepository.AddOrUpdateBasket(B);
@@ -30,7 +33,10 @@ namespace E_CommerceService.Services.Basket_Module
             BasketDTO Basket = new BasketDTO()
             {
                 Id = BasketFromDb.Id,
-                Items = BasketFromDb.Items
+                Items = BasketFromDb.Items,
+                DeliveryMethodId = BasketFromDb.DeliveryMethodId,
+                PaymentIntentId = BasketFromDb.PaymentIntentId,
+                ClientSecret = BasketFromDb.ClientSecret
             };
 
             return Basket; 
