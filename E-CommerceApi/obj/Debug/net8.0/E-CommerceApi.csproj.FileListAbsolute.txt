@@ -42,7 +42,6 @@ D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Soluti
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -56,17 +55,14 @@ D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Soluti
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Composition.TypedParts.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Drawing.Common.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Formats.Asn1.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.IO.Pipelines.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Memory.Data.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Text.Json.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -138,13 +134,8 @@ D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Soluti
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\E-CommerceDomain.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\E-CommerceRepository.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\E-CommerceService.dll
@@ -182,3 +173,5 @@ D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Soluti
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Technologies\Backend\8- Asp.Net Web APIs\E-Commerce Project\E-Commerce Solution\E-CommerceApi\bin\Debug\net8.0\Stripe.net.dll

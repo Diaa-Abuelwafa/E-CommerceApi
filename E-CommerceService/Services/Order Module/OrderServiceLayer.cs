@@ -5,6 +5,8 @@ using E_CommerceDomain.Entities.Product_Module;
 using E_CommerceDomain.Interfaces;
 using E_CommerceDomain.Interfaces.Basket_Module;
 using E_CommerceDomain.Interfaces.Order_Module;
+using E_CommerceDomain.Interfaces.Payment_Module;
+using E_CommerceDomain.Interfaces.Specifications;
 using E_CommerceDomain.Specifications;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -20,14 +22,16 @@ namespace E_CommerceService.Services.Order_Module
         private readonly IUnitOfWork UnitOfWork;
         private readonly IBasketServices BasketService;
         private readonly IConfiguration Config;
+        private readonly IPaymentService PaymentService;
 
-        public OrderServiceLayer(IUnitOfWork UnitOfWork, IBasketServices BasketService, IConfiguration Config)
+        public OrderServiceLayer(IUnitOfWork UnitOfWork, IBasketServices BasketService, IConfiguration Config, IPaymentService PaymentService)
         {
             this.UnitOfWork = UnitOfWork;
             this.BasketService = BasketService;
             this.Config = Config;
+            this.PaymentService = PaymentService;
         }
-        public OrderResponseDTO CreateOrder(string BuyerEmail, AddressDTO ShippingAddress, int DeliveryMethodId, string BasketId)
+        public async Task<OrderResponseDTO> CreateOrder(string BuyerEmail, AddressDTO ShippingAddress, int DeliveryMethodId, string BasketId)
         {
             // Make Object From Class Address To Make A Order
             Address ShipTo = new Address()
@@ -83,8 +87,23 @@ namespace E_CommerceService.Services.Order_Module
                 Items.Add(I);
             }
 
+            // Create Or Update PaymentIntentId 
+
+
+            var SpecV2 = new Specifications<Order, int>();
+            SpecV2.Criteria = P => P.PaymentIntentId == Basket.PaymentIntentId;
+            
+            var OrderCheck = UnitOfWork.Repo<Order, int>().GetById(SpecV2).FirstOrDefault();
+
+            if(OrderCheck is not null)
+            {
+                UnitOfWork.Repo<Order, int>().Delete(OrderCheck.Id);
+            }
+
+            var BasketIntent = await PaymentService.CreateOrUpdatePaymentIntentId(Basket.Id);
+
             // Create The Order
-            var NewOrder = new Order(BuyerEmail, ShipTo, Delivery, Items, SubTotal, "");
+            var NewOrder = new Order(BuyerEmail, ShipTo, Delivery, Items, SubTotal, BasketIntent.PaymentIntentId);
 
             // Add This Order In DB
             UnitOfWork.Repo<Order, int>().Add(NewOrder);
@@ -118,10 +137,11 @@ namespace E_CommerceService.Services.Order_Module
                 };
 
                 ItemsDTO.Add(O);
-                UnitOfWork.SaveChanges();
             }
 
             OrderResponse.Items = ItemsDTO;
+
+            UnitOfWork.SaveChanges();
 
             return OrderResponse;
         }

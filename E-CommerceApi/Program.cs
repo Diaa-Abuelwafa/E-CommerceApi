@@ -25,6 +25,8 @@ using Microsoft.IdentityModel.Tokens;
 using StackExchange.Redis;
 using System.Net;
 using System.Text;
+using E_CommerceDomain.Interfaces.Payment_Module;
+using E_CommerceService.Services.Payment_Module;
 namespace E_CommerceApi
 {
     public class Program
@@ -110,6 +112,8 @@ namespace E_CommerceApi
             builder.Services.AddSingleton<ICachedService, CachedService>();
 
             builder.Services.AddScoped<IOrderService, OrderServiceLayer>();
+
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
 
             // Configure Authentication Middleware To Work JWT Base
             builder.Services.AddAuthentication(O =>

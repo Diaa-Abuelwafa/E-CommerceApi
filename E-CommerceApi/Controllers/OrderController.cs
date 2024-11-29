@@ -24,12 +24,12 @@ namespace E_CommerceApi.Controllers
         [Authorize]
         [ProducesResponseType(typeof(OrderResponseDTO), 200)]
         [ProducesResponseType(typeof(ApiErrorResponse), 400)]
-        public IActionResult CreateOrder(OrderDTO Order)
+        public async Task<IActionResult> CreateOrder(OrderDTO Order)
         {
             var BuyerEmail = User.FindFirstValue(ClaimTypes.Email);
 
 
-            var OrderResponse = OrderService.CreateOrder(BuyerEmail, Order.Address, Order.DeliveryMethodId, Order.BasketId);
+            var OrderResponse = await OrderService.CreateOrder(BuyerEmail, Order.Address, Order.DeliveryMethodId, Order.BasketId);
 
             if(OrderResponse is null)
             {

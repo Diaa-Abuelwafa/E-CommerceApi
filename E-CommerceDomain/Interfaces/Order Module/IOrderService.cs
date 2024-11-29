@@ -11,7 +11,7 @@ namespace E_CommerceDomain.Interfaces.Order_Module
 {
     public interface IOrderService
     {
-        public OrderResponseDTO CreateOrder(string BuyerEmail, AddressDTO ShippingAddress, int DeliveryMethodId, string BasketId);
+        public Task<OrderResponseDTO> CreateOrder(string BuyerEmail, AddressDTO ShippingAddress, int DeliveryMethodId, string BasketId);
         public List<OrderResponseDTO> GetAllOrdersForCurrentUser(string BuyerEmail);
         public OrderResponseDTO GetOrderByIdForCurrentUser(int OrderId, string BuyerEmail);
         public List<DeliveryMethodDTO> GetAllDeliveryMethods();

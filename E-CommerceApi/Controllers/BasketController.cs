@@ -1,6 +1,7 @@
 ﻿using E_CommerceApi.HandlingErrors;
 using E_CommerceDomain.DTOs.Basket_Module;
 using E_CommerceDomain.Interfaces.Basket_Module;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -19,6 +20,7 @@ namespace E_CommerceApi.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult GetBasketById(string BasketId)
         {
             var Basket = BasketServices.GetBasketById(BasketId);
@@ -32,6 +34,7 @@ namespace E_CommerceApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult AddOrUpdateBasket(BasketDTO BasketFromUser)
         {
             var Basket = BasketServices.AddOrUpdateBasket(BasketFromUser);
@@ -40,6 +43,7 @@ namespace E_CommerceApi.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public IActionResult DeleteBasket(string BasketId)
         {
             bool Flag = BasketServices.DeleteBasket(BasketId);
