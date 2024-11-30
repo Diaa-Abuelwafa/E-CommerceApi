@@ -153,6 +153,7 @@ namespace E_CommerceApi
             {
                 var Context = Scope.ServiceProvider.GetRequiredService<AppDbContext>();
                 var AccountContext = Scope.ServiceProvider.GetRequiredService<AccountDbContext>();
+                var LoggerFactory = Scope.ServiceProvider.GetRequiredService<ILoggerFactory>();
 
                 try
                 {
@@ -166,7 +167,16 @@ namespace E_CommerceApi
                 }
                 catch(Exception Ex)
                 {
-                    // Loging In Db
+                    // Logging The Exception
+
+
+                    // Get Instant Of Logger
+                    var Logger = LoggerFactory.CreateLogger<Program>();
+
+                    // Log In The Instatnt 
+                    Logger.LogError(Ex, "An Error Accour");
+
+                    // As I Need Put This Log In Any Place Like DB Or Display In Console
                 }
             }
 
